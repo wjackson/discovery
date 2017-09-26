@@ -249,7 +249,7 @@ class HostService():
         """
 
         last_check_in = host['last_check_in']
-        now = datetime.datetime.now()
+        now = datetime.datetime.utcnow()
 
         if not last_check_in.tzinfo:
             last_check_in = pytz.utc.localize(last_check_in)
